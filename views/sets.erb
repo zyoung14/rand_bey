@@ -1,0 +1,14 @@
+<div class="container">
+	<div class="transparent">
+	</div>
+	<div class="content">
+		<% result.each do |key, value| %>
+			<p>
+				<a href="/sets/<%="#{key}"%>">
+				<%= "#{value["name"].to_s}" %>
+				</a><br>
+				<%= "#{value["description"].to_s}" %>
+			</p>
+		<% end %>
+	</div>
+</div>

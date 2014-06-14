@@ -1,0 +1,21 @@
+<link rel="stylesheet" type="text/css" href="../../style.css">
+
+<div class="container">
+	<div class="transparent">
+	</div>
+	<div class="content">
+
+		<h1>Edit Your Set</h1>
+		<hr>
+		<h2><%= result["name"] %></h2>
+		<form action = '/sets' method="POST">
+			<input type="hidden" name="_method" value="PUT">
+			<input type="hidden" name="name" value="<%= result["name"] %>">
+			<textarea rows="10" cols="30" type="text" name="links"><%= result["vidnums"].join("\r\n") %></textarea><br>
+			<textarea rows="2" cols="30" type="text" name="descrip"><%= result["description"] %></textarea><br>
+			<input type="submit" value="Submit">
+		</form>
+
+	</div>
+</div>
+

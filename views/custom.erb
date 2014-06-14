@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+<div class="container">
+
+	<div class="transparent">
+	</div>
+
+	<div class="content">
+		<h1><%= result["name"]%></h1>
+		<hr>
+		<%= result["description"] %>
+		<p>
+			<form action="/sets/<%= result["name"] %>/play">
+				<input type="submit" value="Play" class="button">
+			</form>
+			<form action="/sets/<%= result["name"] %>/edit">
+				<input type="submit" value="Edit" class="button">
+			</form>
+			<form action="/sets" method="POST">
+				<input type="hidden" name="_method" value="DELETE">
+				<input type="hidden" name="name" value="<%= result["name"] %>">
+				<input type="submit" value="Delete" class="button">
+			</form>
+		</p>
+	</div>
+</div>
